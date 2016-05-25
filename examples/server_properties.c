@@ -93,6 +93,10 @@ static UA_StatusCode createPropertyValueStatement(void *handle, const UA_NodeId 
     UA_Int32 *statementExpressionRelational = (UA_Int32*) (input[5].data);
     //statement semantics
     UA_Int32 *statementSemantics = (UA_Int32*) (input[6].data);
+    //valid from
+    UA_DateTime *validFrom = (UA_DateTime*) (input[7].data);
+    //valid until
+    UA_DateTime *validUntil = (UA_DateTime*) (input[8].data);
 
     UA_Server* server = (UA_Server*) handle;
 
@@ -153,8 +157,12 @@ static UA_StatusCode createPropertyValueStatement(void *handle, const UA_NodeId 
     qn = UA_QUALIFIEDNAME(0, "SemanticExpression");
     setSubNodeValue(server,&qn,&createdNodeId,statementSemantics,&UA_TYPES[UA_TYPES_INT32]);
 
+    qn = UA_QUALIFIEDNAME(0, "ValidFrom");
+    setSubNodeValue(server,&qn,&createdNodeId,validFrom,&UA_TYPES[UA_TYPES_DATETIME]);
 
 
+    qn = UA_QUALIFIEDNAME(0, "ValidUntil");
+    setSubNodeValue(server,&qn,&createdNodeId,validUntil,&UA_TYPES[UA_TYPES_DATETIME]);
 
     UA_String tmp;
     clean_up:
@@ -356,8 +364,8 @@ int main(int argc, char** argv) {
 
         UA_QualifiedName createPropertyValueStatementMethodBrowseName = UA_QUALIFIEDNAME(1,
                 "createPropertyValueStatement");
-        UA_Argument* inArgs1 = UA_Array_new(7, &UA_TYPES[UA_TYPES_ARGUMENT]);
-        for (int i = 0; i < 7; i++) {
+        UA_Argument* inArgs1 = UA_Array_new(9, &UA_TYPES[UA_TYPES_ARGUMENT]);
+        for (int i = 0; i < 9; i++) {
             UA_Argument_init(&inArgs[i]);
         }
 
@@ -424,10 +432,28 @@ int main(int argc, char** argv) {
         inArgs1[6].valueRank = -1;
         inArgs1[6].arrayDimensionsSize = 0;
 
+        //Valid from
+        inArgs1[7].arrayDimensionsSize = 0;
+        inArgs1[7].name = UA_STRING_ALLOC("valid from");
+        inArgs1[7].dataType = UA_TYPES[UA_TYPES_DATETIME].typeId;
+        inArgs1[7].description = UA_LOCALIZEDTEXT("en",
+              "The point in time from which the property value statement is valid");
+        inArgs1[7].valueRank = -1;
+        inArgs1[7].arrayDimensionsSize = 0;
+
+        //Valid until
+                inArgs1[8].arrayDimensionsSize = 0;
+                inArgs1[8].name = UA_STRING_ALLOC("valid until");
+                inArgs1[8].dataType = UA_TYPES[UA_TYPES_DATETIME].typeId;
+                inArgs1[8].description = UA_LOCALIZEDTEXT("en",
+                      "The point in time that represents the expiration time of a property");
+                inArgs1[8].valueRank = -1;
+                inArgs1[8].arrayDimensionsSize = 0;
+
         UA_Server_addMethodNode(server, newNodeId, parentNodeId,
                 UA_NODEID_NUMERIC(0, UA_NS0ID_HASORDEREDCOMPONENT),
                 createPropertyValueStatementMethodBrowseName, methAddStatementAtr, &createPropertyValueStatement,
-                (void*) server, 7, inArgs1, 1, outArgs, &newNodeId);
+                (void*) server, 9, inArgs1, 1, outArgs, &newNodeId);
 
     /* start server */
     UA_StatusCode retval = UA_Server_run(server, &running); //UA_blocks until running=false
