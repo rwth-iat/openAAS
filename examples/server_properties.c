@@ -38,7 +38,7 @@ static UA_StatusCode getChildNodeId(UA_Server *server, const UA_NodeId *parentNo
 
     UA_BrowseResult browseRes = UA_Server_browse(server, expectedRefCount, descr);
 
-    if (browseRes.referencesSize < expectedRefCount) {
+    if (browseRes.referencesSize < 1) {
         retval = UA_STATUSCODE_BADINTERNALERROR;
         goto clean_up;
     }
