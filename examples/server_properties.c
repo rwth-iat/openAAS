@@ -366,7 +366,7 @@ int main(int argc, char** argv) {
                 "createPropertyValueStatement");
         UA_Argument* inArgs1 = UA_Array_new(9, &UA_TYPES[UA_TYPES_ARGUMENT]);
         for (int i = 0; i < 9; i++) {
-            UA_Argument_init(&inArgs[i]);
+            UA_Argument_init(&inArgs1[i]);
         }
 
         //node id property
@@ -442,13 +442,13 @@ int main(int argc, char** argv) {
         inArgs1[7].arrayDimensionsSize = 0;
 
         //Valid until
-                inArgs1[8].arrayDimensionsSize = 0;
-                inArgs1[8].name = UA_STRING_ALLOC("valid until");
-                inArgs1[8].dataType = UA_TYPES[UA_TYPES_DATETIME].typeId;
-                inArgs1[8].description = UA_LOCALIZEDTEXT("en",
-                      "The point in time that represents the expiration time of a property");
-                inArgs1[8].valueRank = -1;
-                inArgs1[8].arrayDimensionsSize = 0;
+        inArgs1[8].arrayDimensionsSize = 0;
+        inArgs1[8].name = UA_STRING_ALLOC("valid until");
+        inArgs1[8].dataType = UA_TYPES[UA_TYPES_DATETIME].typeId;
+        inArgs1[8].description = UA_LOCALIZEDTEXT("en",
+              "The point in time that represents the expiration time of a property");
+        inArgs1[8].valueRank = -1;
+        inArgs1[8].arrayDimensionsSize = 0;
 
         UA_Server_addMethodNode(server, newNodeId, parentNodeId,
                 UA_NODEID_NUMERIC(0, UA_NS0ID_HASORDEREDCOMPONENT),

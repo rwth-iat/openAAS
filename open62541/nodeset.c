@@ -48,21 +48,21 @@ UA_Server_addReference(server, UA_NODEID_NUMERIC(2, 6002), UA_NODEID_NUMERIC(0, 
 
 do {
 // Referencing node found and declared as parent: i=29/Enumeration using i=45/HasSubtype
-// Node: opcua_node_dataType_t(ns=2;i=23003), 1:RelationalExpressionType
+// Node: opcua_node_dataType_t(ns=2;i=23003), 1:RelationalExpressionEnumType
 UA_DataTypeAttributes attr;
 UA_DataTypeAttributes_init(&attr);
-attr.displayName = UA_LOCALIZEDTEXT("", "RelationalExpressionType");
+attr.displayName = UA_LOCALIZEDTEXT("", "RelationalExpressionEnumType");
 attr.description = UA_LOCALIZEDTEXT("", "");
 UA_NodeId nodeId = UA_NODEID_NUMERIC(2, 23003);
 UA_NodeId parentNodeId = UA_NODEID_NUMERIC(0, 29);
 UA_NodeId parentReferenceNodeId = UA_NODEID_NUMERIC(0, 45);
-UA_QualifiedName nodeName = UA_QUALIFIEDNAME(1, "RelationalExpressionType");
+UA_QualifiedName nodeName = UA_QUALIFIEDNAME(1, "RelationalExpressionEnumType");
 UA_Server_addDataTypeNode(server, nodeId, parentNodeId, parentReferenceNodeId, nodeName
        , attr, NULL, NULL);
 } while(0);
 
 do {
-// Referencing node found and declared as parent: ns=2;i=23003/1:RelationalExpressionType using i=46/HasProperty
+// Referencing node found and declared as parent: ns=2;i=23003/1:RelationalExpressionEnumType using i=46/HasProperty
 // Node: opcua_node_variable_t(ns=2;i=26008), EnumStrings
 UA_VariableAttributes attr;
 UA_VariableAttributes_init(&attr);
@@ -331,26 +331,6 @@ UA_NodeId parentReferenceNodeId = UA_NODEID_NUMERIC(0, 45);
 UA_QualifiedName nodeName = UA_QUALIFIEDNAME(1, "PropertyValueStatementType");
 UA_Server_addObjectTypeNode(server, nodeId, parentNodeId, parentReferenceNodeId, nodeName
        , attr, NULL, NULL);
-} while(0);
-
-do {
-// Referencing node found and declared as parent: ns=2;i=21004/1:PropertyValueStatementType using i=47/HasComponent
-// Node: opcua_node_variable_t(ns=2;i=6012), 1:CreationTime
-UA_VariableAttributes attr;
-UA_VariableAttributes_init(&attr);
-attr.displayName = UA_LOCALIZEDTEXT("", "CreationTime");
-attr.description = UA_LOCALIZEDTEXT("", "");
-UA_NodeId nodeId = UA_NODEID_NUMERIC(2, 6012);
-UA_NodeId typeDefinition = UA_NODEID_NULL;
-UA_NodeId parentNodeId = UA_NODEID_NUMERIC(2, 21004);
-UA_NodeId parentReferenceNodeId = UA_NODEID_NUMERIC(0, 47);
-UA_QualifiedName nodeName = UA_QUALIFIEDNAME(1, "CreationTime");
-UA_Server_addVariableNode(server, nodeId, parentNodeId, parentReferenceNodeId, nodeName
-       , typeDefinition
-       , attr, NULL, NULL);
-// This node has the following references that can be created:
-UA_Server_addReference(server, UA_NODEID_NUMERIC(2, 6012), UA_NODEID_NUMERIC(0, 40), UA_EXPANDEDNODEID_NUMERIC(0, 63), true);
-UA_Server_addReference(server, UA_NODEID_NUMERIC(2, 6012), UA_NODEID_NUMERIC(0, 37), UA_EXPANDEDNODEID_NUMERIC(0, 78), true);
 } while(0);
 
 do {
