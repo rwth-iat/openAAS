@@ -8,7 +8,7 @@ More information can be found here: [openAAS Project Page](http://acplt.github.i
 
 ## Important models:
 - Asset Administration Shell (structure)
-- Message based interaction model
+- Message based interaction model [Demo](https://github.com/acplt/openAAS_PropertyDemo/)
 - Property model [Demo](https://github.com/acplt/openAAS_PropertyDemo/)
 - Lifecylce model 
 
