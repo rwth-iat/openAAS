@@ -9,8 +9,8 @@ More information can be found here: [openAAS Project Page](http://acplt.github.i
 ## Important models:
 - Asset Administration Shell (structure)
 - Message based interaction model
-- Property model
-- Lifecylce model
+- Property model [Demo](https://github.com/acplt/openAAS_PropertyDemo/)
+- Lifecylce model 
 
 ## How to contribute
 There are different ways to contribute to the openAAS project:
