@@ -3,7 +3,7 @@ Development Repository for open Asset Administration Shell (openAAS) by Chair of
 
 This repository shows the current development state of the administration shell and contains definitions, models, specifications, and prototypes. The specifications are based on previous achievements of ZVEI Workgroups.
 For prototype development, we use the model based runtime environment [ACPLT/RTE](https://github.com/acplt/rte) as well as open source [OPC UA stack open62541](https://github.com/open62541/open62541) 
-
+There are several base models that are used to describe the constituent parts of an AAS and the AAS itself.
 
 ## Important models:
 - Asset Administration Shell (structure)
