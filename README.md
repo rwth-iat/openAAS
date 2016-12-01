@@ -7,8 +7,8 @@ There are several base models that are used to describe the constituent parts of
 
 ## Important models:
 - Asset Administration Shell (structure)
-- Message based interaction model [Demo](https://github.com/acplt/openAAS_PropertyDemo/)
-- Property model [Demo](https://github.com/acplt/openAAS_PropertyDemo/)
+- Communication Patterns [Demo (Message-based Interaction)](https://github.com/acplt/openAAS_PropertyDemo/),  [Model Description](https://github.com/acplt/openAAS/blob/master/Doc/ComBasic.pdf)
+- Property model [Demo](https://github.com/acplt/openAAS_PropertyDemo/),  [Model Description](https://github.com/acplt/openAAS/blob/master/Doc/PropertyMetaModel.pdf)
 - Lifecylce model 
 
 
