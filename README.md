@@ -4,7 +4,7 @@ Development Repository for open Asset Administration Shell (openAAS) by Chair of
 **Important Information for openAAS Workshop on 2/21/2017**
 
 Another workshop will take place at the end of Februrary. Therefore, the [ACPLT/RTE](https://github.com/acplt/rte) has been extended with an openAAS library. With that library it is possible to create AAS and its components and make it available for different communication technologies, e.g., OPC UA, ACPLT/KS, ACPLT/KSHTTP (REST).
-You can download the ACPLT/RTE repository and get familar with the openAAS library. There have been an update on the model implementations (new data types etc.) The model OPC UA nodeset and data types will be released very soon.
+You can download the ACPLT/RTE repository and get familar with the openAAS library. There have been an update on the model implementations (new data types etc.). The related OPC UA nodeset and data types description will be released very soon.
 
 
 # What's in
