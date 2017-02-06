@@ -3,8 +3,11 @@ Development Repository for open Asset Administration Shell (openAAS) by Chair of
 
 **Workshop 2/21/2017**
 
-Another workshop will take place at the of Februrary. Therefore, the [ACPLT/RTE](https://github.com/acplt/rte) has been extended with an openAAS library. With that library it is possible to create AAS and its components and make it available for different communication technologies, e.g., OPC UA, ACPLT/KS, ACPLT/KSHTTP (REST). You can load the library and browse the models with generic OPC UA clients. A more specialized client will be released very soon.
+Another workshop will take place at the end of Februrary. Therefore, the [ACPLT/RTE](https://github.com/acplt/rte) has been extended with an openAAS library. With that library it is possible to create AAS and its components and make it available for different communication technologies, e.g., OPC UA, ACPLT/KS, ACPLT/KSHTTP (REST).
+You can download the ACPLT/RTE repository and get familar with the openAAS library.
+You can load the library and browse the models with generic OPC UA clients. A more specialized client will be released very soon.
 
+# What's in
 This repository shows the current development state of the administration shell and contains definitions, models, specifications, and prototypes. The specifications are based on previous achievements of ZVEI Workgroups.
 For prototype development, we use the model based runtime environment [ACPLT/RTE](https://github.com/acplt/rte) as well as open source [OPC UA stack open62541](https://github.com/open62541/open62541) 
 There are several base models that are used to describe the constituent parts of an AAS and the AAS itself.
