@@ -1,70 +1,44 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>openAAS by acplt</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
+<p>&lt;!doctype html&gt;</p>
+<p>openAAS by acplt</p>
+<!-- [if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-       <header>
-          <h1>openAAS</h1>
-          <h2>Development Repository for open Asset Administration Shell</h2>
-       
+<div class="wrapper"><header>
+<h1>openAAS</h1>
+<h2>Development Repository for open Asset Administration Shell</h2>
 </header>
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/acplt/openAAS/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/acplt/openAAS/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/acplt/openAAS" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
-
-
-<img class="large" src="Administrationshell.png" alt="Asset Administration Shell"/>
-
-
-
-
-<a id="openaas" class="anchor" href="#openaas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>openAAS</h1>
-
+<section id="downloads" class="clearfix"><a id="download-zip" class="button" href="https://github.com/acplt/openAAS/zipball/master">Download .zip</a> <a id="download-tar-gz" class="button" href="https://github.com/acplt/openAAS/tarball/master">Download .tar.gz</a> <a id="view-on-github" class="button" href="https://github.com/acplt/openAAS">View on GitHub</a></section>
+<hr />
+<section id="main_content">
+<h1><img class="large" src="Administrationshell.png" alt="Asset Administration Shell" /> <a id="openaas" class="anchor" href="#openaas"></a>openAAS</h1>
 <p>Development Repository for open Asset Administration Shell (openAAS) by Chair of Process Control Engineering RWTH Aachen University and ZVEI.</p>
-
-<p>This repository shows the current development state of the administration shell and contains definitions, models, specifications, and prototypes. The specifications are based on previous achievements of ZVEI Workgroups.
-For prototype development, we use the model based runtime environment <a href="https://github.com/acplt/rte">ACPLT/RTE</a> as well as open source <a href="https://github.com/open62541/open62541">OPC UA stack open62541</a> </p>
-
-
-
-
-<h2>
-<a id="Introduction" class="anchor" href="#Introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
-<p>The goal of the project is to support the enforcement and distribution of I40-Component  
-models among the industry experts by providing a general discussible, demonstrable and  
-verifiable reference solution. The reference solution should stabilize the described  
-model in DIN SPEC 91345 quickly and put it in availability to be used. It completes the  
-description in DIN SPEC by formal elements. If required, the reference solution can be  
-used by company-specific developments as a generic base directly. In this project, it is  
-also the goal to build a visible crystallization point that can synchronize many works, summarized and goal-oriented  
-in field of asset administration shell and I40-components.  
-Technical content of the project is to provide a generic asset administration shell  
-functionality as an open framework to development I40-components. It requires a  
-systematical formalization of specifications as well as providing an easy and executable  
-open-source-reference solution. On the base of this concept the specification of  
-standards must be demonstrated and verified.
-</p>
-<h2>
-<a id="project-plan" class="anchor" href="#project-plan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Plan</h2>
-<!--<p>tbd</p>-->
+<p>This repository shows the current development state of the administration shell and contains definitions, models, specifications, and prototypes. The specifications are based on previous achievements of ZVEI Workgroups. For prototype development, we use the model based runtime environment <a href="https://github.com/acplt/rte">ACPLT/RTE</a> as well as open source <a href="https://github.com/open62541/open62541">OPC UA stack open62541</a></p>
+<h2><a id="Introduction" class="anchor" href="#Introduction"></a>Introduction</h2>
+<p>The goal of the project is to support the enforcement and distribution of I40-Component models among the industry experts by providing a general discussible, demonstrable and verifiable reference solution. The reference solution should stabilize the described model in DIN SPEC 91345 quickly and put it in availability to be used. It completes the description in DIN SPEC by formal elements. If required, the reference solution can be used by company-specific developments as a generic base directly. In this project, it is also the goal to build a visible crystallization point that can synchronize many works, summarized and goal-oriented in field of asset administration shell and I40-components. Technical content of the project is to provide a generic asset administration shell functionality as an open framework to development I40-components. It requires a systematical formalization of specifications as well as providing an easy and executable open-source-reference solution. On the base of this concept the specification of standards must be demonstrated and verified.</p>
+<h2><a id="Current State" class="anchor" href="#Current State"></a>Current State</h2>
+The openAAS specifies a basic structure for an Asset Administration Shell. The current structure in UML notation can be found <a href="https://github.com/acplt/openAAS/tree/master/UML">here</a>. In the current implementation, we focus on describing the corresponding Asset with properties and logging the events within the lifecycle of the I4.0 component. At Hannover Fair 2017, openAAS Software was demonstrated with the Use Case <a href="http://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/exemplification-i40-value-based-service.pdf?__blob=publicationFile&amp;v=5">Value-Based-Service</a> on the official Plattform-Industrie 4.0-Demonstrator. 
+<p><strong>Things that are not covered by openAAS:</strong> The aim of the openAAS project is to provide a basic sheme on how an Asset Administration Shell could be implemented. Unlike in other <a href="https://www.zvei.org/themen/industrie-40/struktur-der-verwaltungsschale/">publications</a>, openAAS limits its view only on the administration facet of the Asset Administration Shell in openAAS. There are still &ldquo;gaps&rdquo; that are not considered neither conceptual nor with an implementation. These gaps prevent the integration of the openAAS Software within a production environment:</p>
+<ul type="square">
+<li>Security aspects
+<ul>
+<li>Authentication: How is the identity of the AAS guaranteed?</li>
+<li>Who may access which kind of data?</li>
+<li>How is the integrity of data secured?</li>
+</ul>
+</li>
+<li>Deployment and Engineering aspects
+<ul>
+<li>Engineering Support for AAS: Data gathering, automatic creation, linkage</li>
+<li>Deployment of AAS on Device (with all further security aspects)</li>
+<li>Dealing with templates of AAS</li>
+<li>Device Integration, coupling of Asset and Shell</li>
+</ul>
+</li>
+</ul>
+<p>The ZVEI working group &ldquo;Security&rdquo; has inspected the security of the AAS based on a use case. The outcome can be found <a href=" https://www.zvei.org/presse-medien/publikationen/diskussionspapier-security-der-verwaltungsschale/">here</a></p>
+<h2><a id="project-plan" class="anchor" href="#project-plan"></a>Project Plan</h2>
+<ul>
+<ul><!--<p>tbd</p>-->
 <ul>
 <li><a href="FormalDescriptionofArchitecture.html">Formal Description of Architecture</a></li>
 <li><a href="ImplementationofArchitecture.html">Implementation of Architecture Framework as Executable (Software-) Components</a></li>
@@ -74,34 +48,26 @@ standards must be demonstrated and verified.
 <li><a href="DescriptionImplementation.html">Description, Implementation and explanation of 4 use case scenarios</a></li>
 <li>Preparation, organisation and conduction of several plug-Workshops</li>
 </ul>
-<h2>
-<a id="important-models" class="anchor" href="#important-models" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important models:</h2>
-
+</ul>
+</ul>
+<h2><a id="important-models" class="anchor" href="#important-models"></a>Important models:</h2>
+<ul>
+<ul>
 <ul>
 <li><a href="AssetAdministrationShell.html">Asset Administration Shell</a></li>
 <li>Message based interaction model</li>
 <li><a href="propertyModel.html">Property Model</a></li>
 <li>Lifecycle model</li>
 </ul>
-
-<h2>
-<a id="how-to-contribute" class="anchor" href="#how-to-contribute" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to contribute</h2>
-
+</ul>
+</ul>
+<h2><a id="how-to-contribute" class="anchor" href="#how-to-contribute"></a>How to contribute</h2>
 <p>There are different ways to contribute to the openAAS project:</p>
-
+<ul>
 <ul>
 <li>You can set up a new <a href="https://github.com/acplt/openAAS/issues">Issue</a> which allows you to describe your concerns and reference to existing specifications.</li>
 <li>If you would like to make some changes and test around and afterwards offer your changes, you can <a href="https://help.github.com/articles/fork-a-repo/">Fork</a> openAAS repository, make you changes and offer them by creating a <a href="https://help.github.com/articles/creating-a-pull-request/">Pull Request</a>.</li>
 </ul>
-        </section>
-
-        <footer>
-          openAAS is maintained by <a href="https://github.com/acplt">acplt</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
-    </div>
-  </body>
-</html>
+</ul>
+</section>
+<footer>openAAS is maintained by <a href="https://github.com/acplt">acplt</a><br /> This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</footer></div>
