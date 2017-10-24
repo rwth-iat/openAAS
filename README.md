@@ -1,6 +1,15 @@
 # openAAS
 Development Repository for open Asset Administration Shell (openAAS) by Chair of Process Control Engineering RWTH Aachen University and ZVEI.
 
+**Quick-start: Using the Demo**
+
+For a simple demo that can be run on Linux, please checkout the [ACPLT/RTE](https://github.com/acplt/rte) and follow the installation instruction.
+After Installation and start you can load an example that shows two AAS (i.e., for a motor and its Type).
+
+``
+./rte/build/acplt/system/sysbin/fb_dbcommands -s localhost:7509/MANAGER -load -f rte/addonlibs/administration/FBD/openAAS_Demo_17_10_20.FBD'
+`` 
+
 **Important Information for openAAS Workshop on 2/21/2017**
 
 Another workshop will take place at the end of Februrary. Therefore, the [ACPLT/RTE](https://github.com/acplt/rte) has been extended with an openAAS library. With that library it is possible to create AAS and its components and make it available for different communication technologies, e.g., OPC UA, ACPLT/KS, ACPLT/KSHTTP (REST).
