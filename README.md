@@ -7,7 +7,8 @@ For a simple demo that can be run on Linux, please checkout the [ACPLT/RTE](http
 After Installation and start you can load an example that shows two AAS (i.e., for a motor and its Type).
 
 ``
-./rte/build/acplt/system/sysbin/fb_dbcommands -s localhost:7509/MANAGER -load -f rte/addonlibs/administration/FBD/openAAS_Demo_17_10_20.FBD'
+./rte/build/acplt/system/sysbin/fb_dbcommands -s localhost:7509/MANAGER -load -f rte/addonlibs/administration/FBD/openAAS_Demo_17_10_20.FBD
+
 `` 
 
 **Important Information for openAAS Workshop on 2/21/2017**
