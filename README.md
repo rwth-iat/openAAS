@@ -8,7 +8,11 @@ After Installation and start you can load an example that shows two AAS (i.e., f
 
 ``
 ./rte/build/acplt/system/sysbin/fb_dbcommands -s localhost:7509/MANAGER -load -f rte/addonlibs/administration/FBD/openAAS_Demo_17_10_20.FBD
+`` 
+Now, you are able to browse the Server with an OPC UA client. The demo AAS can be found within the OCP UA Server
 
+`` 
+/Root/Objects///TechUnits/openAAS/AASFolder/
 `` 
 
 **Important Information for openAAS Workshop on 2/21/2017**
