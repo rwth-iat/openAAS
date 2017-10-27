@@ -3,12 +3,27 @@ Development Repository for open Asset Administration Shell (openAAS) by Chair of
 
 **Quick-start: Using the Demo**
 
-For a simple demo that can be run on Linux, please checkout the [ACPLT/RTE](https://github.com/acplt/rte) and follow the installation instruction.
+For a simple demo that can be run on Linux, please checkout the [ACPLT/RTE](https://github.com/acplt/rte) and follow the installation instruction. In short:
+``
+git clone https://github.com/acplt/rte
+``
+
+``
+cd rte/build/ && tclsh acplt_build.tcl
+``
+
+``
+cd acplt/servers/MANAGER/ && ./build_database.sh
+``
+``
+./start_server.sh &
+``
+
 After Installation and start you can load an example that shows two AAS (i.e., for a motor and its Type).
 
 ``
-./rte/build/acplt/system/sysbin/fb_dbcommands -s localhost:7509/MANAGER -load -f rte/addonlibs/administration/FBD/openAAS_Demo_17_10_20.FBD
-`` 
+./../../system/sysbin/fb_dbcommands -s localhost:7509/MANAGER -load -f ../../../../addonlibs/administration/FBD/openAAS_Demo_17_10_20.fbd
+``
 
 Now, you are able to browse the Server with an OPC UA client. The demo AAS can be found within the OCP UA Server
 
