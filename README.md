@@ -15,6 +15,7 @@ cd rte/build/ && tclsh acplt_build.tcl
 ``
 cd acplt/servers/MANAGER/ && ./build_database.sh
 ``
+
 ``
 ./start_server.sh &
 ``
