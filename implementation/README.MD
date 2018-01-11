@@ -1,5 +1,5 @@
 # Asset Administration Shell structuring in openAAS
-The Asset Administration Shell Object consists of a Header and a Body. The Header provides information about the Shell and the Asset (Asset ID, Type Reference etc). The Body describes the Asset and the Asset functionality.
+The Asset Administration Shell Object consists of a Header and a Body. The Header provides information about the Shell and the Asset (Asset ID, Type Reference etc). The Body describes the Asset and the Asset FUNCTIONALality.
 The information is structured as Sub Models or Property Value Statement Containers (previously Lists) within Header and Body.
 
 **Header**
@@ -52,7 +52,7 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 							"IDType": "URI",
 							"IDSpec": "http://openaas.org/properties/assetId"
 						},
-						"View": "FUNCTION",
+						"View": "FUNCTIONAL",
 						"Visibilty": "PUBLIC",
 						"Value": "URI:http://acplt.org/Assets/Motor_M23"
 					},
@@ -65,7 +65,7 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 							"IDType": "URI",
 							"IDSpec": "https://openaas.org/properties/isInstance"
 						},
-						"View": "FUNCTION",
+						"View": "FUNCTIONAL",
 						"Visibilty": "PUBLIC",
 						"Value": true
 					},
@@ -78,7 +78,7 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 							"IDType": "URI",
 							"IDSpec": "https://openaas.org/properties/TypeID"
 						},
-						"View": "FUNCTION",
+						"View": "FUNCTIONAL",
 						"Visibilty": "PUBLIC",
 						"Value": "URI:http://acplt.org/AAS/MotorType"
 					}
@@ -116,7 +116,7 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 									"IDType": 0,
 									"IDSpec": ""
 								},
-								"View": "FUNCTION",
+								"View": "FUNCTIONAL",
 								"Visibilty": "PUBLIC",
 								"Value": 0
 							},
@@ -132,7 +132,7 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 									"IDType": 0,
 									"IDSpec": ""
 								},
-								"View": "FUNCTION",
+								"View": "FUNCTIONAL",
 								"Visibilty": "PUBLIC",
 								"Value": false
 							}
