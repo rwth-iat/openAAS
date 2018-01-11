@@ -1,0 +1,29 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://yourorganisation.org/identification/Types.xsd" xmlns:tns="http://yourorganisation.org/identification/Types.xsd" xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd"/>
+    <xs:simpleType name="IdEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="URI_0"/>
+            <xs:enumeration value="ISO_1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element type="tns:IdEnum" name="IdEnum"/>
+    <xs:complexType name="ListOfIdEnum">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" type="tns:IdEnum" name="IdEnum" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:ListOfIdEnum" name="ListOfIdEnum" nillable="true"/>
+    <xs:complexType name="Identification">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="IdSpec"/>
+            <xs:element minOccurs="0" maxOccurs="1" type="tns:IdEnum" name="IdType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:Identification" name="Identification"/>
+    <xs:complexType name="ListOfIdentification">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" type="tns:Identification" name="Identification" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:ListOfIdentification" name="ListOfIdentification" nillable="true"/>
+</xs:schema>

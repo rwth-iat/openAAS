@@ -1,0 +1,482 @@
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:s1="http://yourorganisation.org/pvs/Types.xsd" xmlns:s2="http://yourorganisation.org/identification/Types.xsd" xmlns:ua="http://unifiedautomation.com/Configuration/NodeSet.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <NamespaceUris>
+        <Uri>http://yourorganisation.org/pvs/</Uri>
+        <Uri>http://yourorganisation.org/identification/</Uri>
+    </NamespaceUris>
+    <Aliases>
+        <Alias Alias="String">i=12</Alias>
+        <Alias Alias="ByteString">i=15</Alias>
+        <Alias Alias="LocalizedText">i=21</Alias>
+        <Alias Alias="HasModellingRule">i=37</Alias>
+        <Alias Alias="HasTypeDefinition">i=40</Alias>
+        <Alias Alias="HasSubtype">i=45</Alias>
+        <Alias Alias="HasProperty">i=46</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+        <Alias Alias="Identification">ns=2;i=3002</Alias>
+        <Alias Alias="ExpressionLogicEnum">ns=1;i=3002</Alias>
+        <Alias Alias="ExpressionSemanticEnum">ns=1;i=3003</Alias>
+        <Alias Alias="ViewEnum">ns=1;i=3004</Alias>
+        <Alias Alias="VisibilityEnum">ns=1;i=3005</Alias>
+    </Aliases>
+    <Extensions>
+        <Extension>
+            <ua:ModelInfo Tool="UaModeler" Hash="PdwP3eAJNUXPQLkxIOwTvQ==" Version="1.5.0"/>
+        </Extension>
+    </Extensions>
+    <UADataType NodeId="ns=1;i=3002" BrowseName="1:ExpressionLogicEnum">
+        <DisplayName>ExpressionLogicEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6004</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:ExpressionLogicEnum">
+            <Field Name="GREATER_THAN" Value="0"/>
+            <Field Name="GREATER_EQUAL" Value="1"/>
+            <Field Name="EQUAL" Value="2"/>
+            <Field Name="NOT_EQUAL" Value="3"/>
+            <Field Name="LESS_EQUAL" Value="4"/>
+            <Field Name="LESS_THAN" Value="5"/>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=3002" ValueRank="1" NodeId="ns=1;i=6004" ArrayDimensions="6" BrowseName="EnumStrings">
+        <DisplayName>EnumStrings</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <uax:ListOfLocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>GREATER_THAN</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>GREATER_EQUAL</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>EQUAL</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>NOT_EQUAL</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>LESS_EQUAL</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>LESS_THAN</uax:Text>
+                </uax:LocalizedText>
+            </uax:ListOfLocalizedText>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3003" BrowseName="1:ExpressionSemanticEnum">
+        <DisplayName>ExpressionSemanticEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6009</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:ExpressionSemanticEnum">
+            <Field Name="ASSURANCE" Value="0"/>
+            <Field Name="SETTING" Value="1"/>
+            <Field Name="MEASUREMENT" Value="2"/>
+            <Field Name="REQUIREMENT" Value="3"/>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=3003" ValueRank="1" NodeId="ns=1;i=6009" ArrayDimensions="4" BrowseName="EnumStrings">
+        <DisplayName>EnumStrings</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <uax:ListOfLocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>ASSURANCE</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>SETTING</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>MEASUREMENT</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>REQUIREMENT</uax:Text>
+                </uax:LocalizedText>
+            </uax:ListOfLocalizedText>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3004" BrowseName="1:ViewEnum">
+        <DisplayName>ViewEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6015</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:ViewEnum">
+            <Field Name="BUSINESS" Value="0"/>
+            <Field Name="CONSTRUCTION" Value="1"/>
+            <Field Name="POWER" Value="2"/>
+            <Field Name="FUNCTIONAL" Value="3"/>
+            <Field Name="LOCATION" Value="4"/>
+            <Field Name="SECURITY" Value="5"/>
+            <Field Name="NETWORK" Value="6"/>
+            <Field Name="LIFECYCLE" Value="7"/>
+            <Field Name="HUMAN" Value="8"/>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=3004" ValueRank="1" NodeId="ns=1;i=6015" ArrayDimensions="9" BrowseName="EnumStrings">
+        <DisplayName>EnumStrings</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3004</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <uax:ListOfLocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>BUSINESS</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>CONSTRUCTION</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>POWER</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>FUNCTIONAL</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>LOCATION</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>SECURITY</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>NETWORK</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>LIFECYCLE</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>HUMAN</uax:Text>
+                </uax:LocalizedText>
+            </uax:ListOfLocalizedText>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3005" BrowseName="1:VisibilityEnum">
+        <DisplayName>VisibilityEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6016</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:VisibilityEnum">
+            <Field Name="PRIVAT" Value="0"/>
+            <Field Name="CONTRACT" Value="1"/>
+            <Field Name="PUBLIC" Value="2"/>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=3005" ValueRank="1" NodeId="ns=1;i=6016" ArrayDimensions="3" BrowseName="EnumStrings">
+        <DisplayName>EnumStrings</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3005</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <uax:ListOfLocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>PRIVAT</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>CONTRACT</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>PUBLIC</uax:Text>
+                </uax:LocalizedText>
+            </uax:ListOfLocalizedText>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="ByteString" NodeId="ns=1;i=6005" BrowseName="1:TypeDictionary">
+        <DisplayName>TypeDictionary</DisplayName>
+        <Description>Collects the data type descriptions of http://yourorganisation.org/pvs/</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6006</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
+        </References>
+        <Value>
+            <uax:ByteString>PG9wYzpUeXBlRGljdGlvbmFyeSB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZ
+        W1hLWluc3RhbmNlIiB4bWxuczp0bnM9Imh0dHA6Ly95b3Vyb3JnYW5pc2F0aW9uLm9yZy9wd
+        nMvIiBEZWZhdWx0Qnl0ZU9yZGVyPSJMaXR0bGVFbmRpYW4iIHhtbG5zOm9wYz0iaHR0cDovL
+        29wY2ZvdW5kYXRpb24ub3JnL0JpbmFyeVNjaGVtYS8iIHhtbG5zOnVhPSJodHRwOi8vb3BjZ
+        m91bmRhdGlvbi5vcmcvVUEvIiBUYXJnZXROYW1lc3BhY2U9Imh0dHA6Ly95b3Vyb3JnYW5pc
+        2F0aW9uLm9yZy9wdnMvIj4KIDxvcGM6SW1wb3J0IE5hbWVzcGFjZT0iaHR0cDovL29wY2Zvd
+        W5kYXRpb24ub3JnL1VBLyIvPgogPG9wYzpFbnVtZXJhdGVkVHlwZSBMZW5ndGhJbkJpdHM9I
+        jMyIiBOYW1lPSJFeHByZXNzaW9uTG9naWNFbnVtIj4KICA8b3BjOkVudW1lcmF0ZWRWYWx1Z
+        SBOYW1lPSJHUkVBVEVSX1RIQU4iIFZhbHVlPSIwIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsd
+        WUgTmFtZT0iR1JFQVRFUl9FUVVBTCIgVmFsdWU9IjEiLz4KICA8b3BjOkVudW1lcmF0ZWRWY
+        Wx1ZSBOYW1lPSJFUVVBTCIgVmFsdWU9IjIiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOY
+        W1lPSJOT1RfRVFVQUwiIFZhbHVlPSIzIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZ
+        T0iTEVTU19FUVVBTCIgVmFsdWU9IjQiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lP
+        SJMRVNTX1RIQU4iIFZhbHVlPSI1Ii8+CiA8L29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6R
+        W51bWVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzPSIzMiIgTmFtZT0iRXhwcmVzc2lvblNlbWFud
+        GljRW51bSI+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iQVNTVVJBTkNFIiBWYWx1Z
+        T0iMCIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IlNFVFRJTkciIFZhbHVlPSIxI
+        i8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iTUVBU1VSRU1FTlQiIFZhbHVlPSIyI
+        i8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iUkVRVUlSRU1FTlQiIFZhbHVlPSIzI
+        i8+CiA8L29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6RW51bWVyYXRlZFR5cGUgTGVuZ3RoS
+        W5CaXRzPSIzMiIgTmFtZT0iVmlld0VudW0iPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hb
+        WU9IkJVU0lORVNTIiBWYWx1ZT0iMCIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9I
+        kNPTlNUUlVDVElPTiIgVmFsdWU9IjEiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lP
+        SJQT1dFUiIgVmFsdWU9IjIiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJGVU5DV
+        ElPTkFMIiBWYWx1ZT0iMyIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkxPQ0FUS
+        U9OIiBWYWx1ZT0iNCIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IlNFQ1VSSVRZI
+        iBWYWx1ZT0iNSIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9Ik5FVFdPUksiIFZhb
+        HVlPSI2Ii8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iTElGRUNZQ0xFIiBWYWx1Z
+        T0iNyIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkhVTUFOIiBWYWx1ZT0iOCIvP
+        gogPC9vcGM6RW51bWVyYXRlZFR5cGU+CiA8b3BjOkVudW1lcmF0ZWRUeXBlIExlbmd0aEluQ
+        ml0cz0iMzIiIE5hbWU9IlZpc2liaWxpdHlFbnVtIj4KICA8b3BjOkVudW1lcmF0ZWRWYWx1Z
+        SBOYW1lPSJQUklWQVQiIFZhbHVlPSIwIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZ
+        T0iQ09OVFJBQ1QiIFZhbHVlPSIxIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iU
+        FVCTElDIiBWYWx1ZT0iMiIvPgogPC9vcGM6RW51bWVyYXRlZFR5cGU+Cjwvb3BjOlR5cGVEa
+        WN0aW9uYXJ5Pgo=</uax:ByteString>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6005" NodeId="ns=1;i=6006" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6005</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <uax:String>http://yourorganisation.org/pvs/</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="ByteString" NodeId="ns=1;i=6007" BrowseName="1:TypeDictionary">
+        <DisplayName>TypeDictionary</DisplayName>
+        <Description>Collects the data type descriptions of http://yourorganisation.org/pvs/</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=92</Reference>
+        </References>
+        <Value>
+            <uax:ByteString>PHhzOnNjaGVtYSBlbGVtZW50Rm9ybURlZmF1bHQ9InF1YWxpZmllZCIgdGFyZ2V0TmFtZXNwYWNlPSJod
+        HRwOi8veW91cm9yZ2FuaXNhdGlvbi5vcmcvcHZzL1R5cGVzLnhzZCIgeG1sbnM6dG5zPSJod
+        HRwOi8veW91cm9yZ2FuaXNhdGlvbi5vcmcvcHZzL1R5cGVzLnhzZCIgeG1sbnM6dWE9Imh0d
+        HA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9VQS8yMDA4LzAyL1R5cGVzLnhzZCIgeG1sbnM6eHM9I
+        mh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIj4KIDx4czppbXBvcnQgbmFtZXNwY
+        WNlPSJodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvVUEvMjAwOC8wMi9UeXBlcy54c2QiLz4KI
+        Dx4czpzaW1wbGVUeXBlIG5hbWU9IkV4cHJlc3Npb25Mb2dpY0VudW0iPgogIDx4czpyZXN0c
+        mljdGlvbiBiYXNlPSJ4czpzdHJpbmciPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkdSR
+        UFURVJfVEhBTl8wIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iR1JFQVRFUl9FUVVBT
+        F8xIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iRVFVQUxfMiIvPgogICA8eHM6ZW51b
+        WVyYXRpb24gdmFsdWU9Ik5PVF9FUVVBTF8zIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1Z
+        T0iTEVTU19FUVVBTF80Ii8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iTEVTU19USEFOX
+        zUiLz4KICA8L3hzOnJlc3RyaWN0aW9uPgogPC94czpzaW1wbGVUeXBlPgogPHhzOmVsZW1lb
+        nQgdHlwZT0idG5zOkV4cHJlc3Npb25Mb2dpY0VudW0iIG5hbWU9IkV4cHJlc3Npb25Mb2dpY
+        0VudW0iLz4KIDx4czpjb21wbGV4VHlwZSBuYW1lPSJMaXN0T2ZFeHByZXNzaW9uTG9naWNFb
+        nVtIj4KICA8eHM6c2VxdWVuY2U+CiAgIDx4czplbGVtZW50IG1pbk9jY3Vycz0iMCIgbWF4T
+        2NjdXJzPSJ1bmJvdW5kZWQiIHR5cGU9InRuczpFeHByZXNzaW9uTG9naWNFbnVtIiBuYW1lP
+        SJFeHByZXNzaW9uTG9naWNFbnVtIiBuaWxsYWJsZT0idHJ1ZSIvPgogIDwveHM6c2VxdWVuY
+        2U+CiA8L3hzOmNvbXBsZXhUeXBlPgogPHhzOmVsZW1lbnQgdHlwZT0idG5zOkxpc3RPZkV4c
+        HJlc3Npb25Mb2dpY0VudW0iIG5hbWU9Ikxpc3RPZkV4cHJlc3Npb25Mb2dpY0VudW0iIG5pb
+        GxhYmxlPSJ0cnVlIi8+CiA8eHM6c2ltcGxlVHlwZSBuYW1lPSJFeHByZXNzaW9uU2VtYW50a
+        WNFbnVtIj4KICA8eHM6cmVzdHJpY3Rpb24gYmFzZT0ieHM6c3RyaW5nIj4KICAgPHhzOmVud
+        W1lcmF0aW9uIHZhbHVlPSJBU1NVUkFOQ0VfMCIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsd
+        WU9IlNFVFRJTkdfMSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9Ik1FQVNVUkVNRU5UX
+        zIiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJSRVFVSVJFTUVOVF8zIi8+CiAgPC94c
+        zpyZXN0cmljdGlvbj4KIDwveHM6c2ltcGxlVHlwZT4KIDx4czplbGVtZW50IHR5cGU9InRuc
+        zpFeHByZXNzaW9uU2VtYW50aWNFbnVtIiBuYW1lPSJFeHByZXNzaW9uU2VtYW50aWNFbnVtI
+        i8+CiA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mRXhwcmVzc2lvblNlbWFudGljRW51b
+        SI+CiAgPHhzOnNlcXVlbmNlPgogICA8eHM6ZWxlbWVudCBtaW5PY2N1cnM9IjAiIG1heE9jY
+        3Vycz0idW5ib3VuZGVkIiB0eXBlPSJ0bnM6RXhwcmVzc2lvblNlbWFudGljRW51bSIgbmFtZ
+        T0iRXhwcmVzc2lvblNlbWFudGljRW51bSIgbmlsbGFibGU9InRydWUiLz4KICA8L3hzOnNlc
+        XVlbmNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4czplbGVtZW50IHR5cGU9InRuczpMaXN0T
+        2ZFeHByZXNzaW9uU2VtYW50aWNFbnVtIiBuYW1lPSJMaXN0T2ZFeHByZXNzaW9uU2VtYW50a
+        WNFbnVtIiBuaWxsYWJsZT0idHJ1ZSIvPgogPHhzOnNpbXBsZVR5cGUgbmFtZT0iVmlld0Vud
+        W0iPgogIDx4czpyZXN0cmljdGlvbiBiYXNlPSJ4czpzdHJpbmciPgogICA8eHM6ZW51bWVyY
+        XRpb24gdmFsdWU9IkJVU0lORVNTXzAiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJDT
+        05TVFJVQ1RJT05fMSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IlBPV0VSXzIiLz4KI
+        CAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJGVU5DVElPTkFMXzMiLz4KICAgPHhzOmVudW1lc
+        mF0aW9uIHZhbHVlPSJMT0NBVElPTl80Ii8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iU
+        0VDVVJJVFlfNSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9Ik5FVFdPUktfNiIvPgogI
+        CA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkxJRkVDWUNMRV83Ii8+CiAgIDx4czplbnVtZXJhd
+        GlvbiB2YWx1ZT0iSFVNQU5fOCIvPgogIDwveHM6cmVzdHJpY3Rpb24+CiA8L3hzOnNpbXBsZ
+        VR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6Vmlld0VudW0iIG5hbWU9IlZpZXdFbnVtI
+        i8+CiA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mVmlld0VudW0iPgogIDx4czpzZXF1Z
+        W5jZT4KICAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZ
+        CIgdHlwZT0idG5zOlZpZXdFbnVtIiBuYW1lPSJWaWV3RW51bSIgbmlsbGFibGU9InRydWUiL
+        z4KICA8L3hzOnNlcXVlbmNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4czplbGVtZW50IHR5c
+        GU9InRuczpMaXN0T2ZWaWV3RW51bSIgbmFtZT0iTGlzdE9mVmlld0VudW0iIG5pbGxhYmxlP
+        SJ0cnVlIi8+CiA8eHM6c2ltcGxlVHlwZSBuYW1lPSJWaXNpYmlsaXR5RW51bSI+CiAgPHhzO
+        nJlc3RyaWN0aW9uIGJhc2U9InhzOnN0cmluZyI+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1Z
+        T0iUFJJVkFUXzAiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJDT05UUkFDVF8xIi8+C
+        iAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iUFVCTElDXzIiLz4KICA8L3hzOnJlc3RyaWN0a
+        W9uPgogPC94czpzaW1wbGVUeXBlPgogPHhzOmVsZW1lbnQgdHlwZT0idG5zOlZpc2liaWxpd
+        HlFbnVtIiBuYW1lPSJWaXNpYmlsaXR5RW51bSIvPgogPHhzOmNvbXBsZXhUeXBlIG5hbWU9I
+        kxpc3RPZlZpc2liaWxpdHlFbnVtIj4KICA8eHM6c2VxdWVuY2U+CiAgIDx4czplbGVtZW50I
+        G1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1bmJvdW5kZWQiIHR5cGU9InRuczpWaXNpYmlsa
+        XR5RW51bSIgbmFtZT0iVmlzaWJpbGl0eUVudW0iIG5pbGxhYmxlPSJ0cnVlIi8+CiAgPC94c
+        zpzZXF1ZW5jZT4KIDwveHM6Y29tcGxleFR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6T
+        GlzdE9mVmlzaWJpbGl0eUVudW0iIG5hbWU9Ikxpc3RPZlZpc2liaWxpdHlFbnVtIiBuaWxsY
+        WJsZT0idHJ1ZSIvPgo8L3hzOnNjaGVtYT4K</uax:ByteString>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6008" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6007</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+        <Value>
+            <uax:String>http://yourorganisation.org/pvs/Types.xsd</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariableType ValueRank="-2" NodeId="ns=1;i=2002" BrowseName="1:PropertyValueStatementType">
+        <DisplayName>PropertyValueStatementType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6025</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6027</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6028</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6026</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6012</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=63</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6017</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6018</Reference>
+        </References>
+    </UAVariableType>
+    <UAVariable DataType="Identification" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6025" BrowseName="1:CarrierId" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>CarrierId</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="ExpressionLogicEnum" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6027" BrowseName="1:ExpressionLogic" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>ExpressionLogic</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="ExpressionSemanticEnum" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6028" BrowseName="1:ExpressionSemantic" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>ExpressionSemantic</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Identification" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6026" BrowseName="1:PropertyId" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>PropertyId</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6012" BrowseName="1:Value" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Value</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="ViewEnum" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6017" BrowseName="1:View" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>View</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="VisibilityEnum" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6018" BrowseName="1:Visibility" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Visibility</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+        </References>
+    </UAVariable>
+    <UAObjectType NodeId="ns=1;i=1002" BrowseName="1:PropertyValueStatementListType">
+        <DisplayName>PropertyValueStatementListType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=6011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6001</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6002</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6010</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6014</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6019</Reference>
+        </References>
+    </UAObjectType>
+    <UAVariable SymbolicName="PropertyValueStatements" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6011" BrowseName="1:&lt;PropertyValueStatements>" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>&lt;PropertyValueStatements></DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11510</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2002</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6013</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable ParentNodeId="ns=1;i=6011" NodeId="ns=1;i=6013" BrowseName="1:Value" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Value</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6011</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Identification" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6001" BrowseName="1:CarrierID" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>CarrierID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="ExpressionLogicEnum" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6002" BrowseName="1:ExpressionLogic" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>ExpressionLogic</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="ExpressionSemanticEnum" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6003" BrowseName="1:ExpressionSemantic" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>ExpressionSemantic</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Identification" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6010" BrowseName="1:PropertyID" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>PropertyID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="ViewEnum" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6014" BrowseName="1:View" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>View</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="VisibilityEnum" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6019" BrowseName="1:Visibility" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>Visibility</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+    </UAVariable>
+</UANodeSet>

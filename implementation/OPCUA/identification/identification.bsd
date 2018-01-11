@@ -1,0 +1,11 @@
+<opc:TypeDictionary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://yourorganisation.org/identification/" DefaultByteOrder="LittleEndian" xmlns:opc="http://opcfoundation.org/BinarySchema/" xmlns:ua="http://opcfoundation.org/UA/" TargetNamespace="http://yourorganisation.org/identification/">
+    <opc:Import Namespace="http://opcfoundation.org/UA/"/>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="Identification">
+        <opc:Field TypeName="opc:CharArray" Name="IdSpec"/>
+        <opc:Field TypeName="tns:IdEnum" Name="IdType"/>
+    </opc:StructuredType>
+    <opc:EnumeratedType LengthInBits="32" Name="IdEnum">
+        <opc:EnumeratedValue Name="URI" Value="0"/>
+        <opc:EnumeratedValue Name="ISO" Value="1"/>
+    </opc:EnumeratedType>
+</opc:TypeDictionary>

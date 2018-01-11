@@ -1,0 +1,21 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://yourorganisation.org/lce/Types.xsd" xmlns:tns="http://yourorganisation.org/lce/Types.xsd" xmlns:ns1="http://yourorganisation.org/identification/Types.xsd" xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd"/>
+    <xs:import namespace="http://yourorganisation.org/identification/Types.xsd"/>
+    <xs:complexType name="LifeCycleEntry">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" type="ns1:Identification" name="CreatingInstance"/>
+            <xs:element minOccurs="0" maxOccurs="1" type="ns1:Identification" name="WritingInstance"/>
+            <xs:element minOccurs="0" maxOccurs="1" type="ua:DataValue" name="Data"/>
+            <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="Subject"/>
+            <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="EventClass"/>
+            <xs:element minOccurs="0" maxOccurs="1" type="xs:unsignedLong" name="Id"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:LifeCycleEntry" name="LifeCycleEntry"/>
+    <xs:complexType name="ListOfLifeCycleEntry">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" type="tns:LifeCycleEntry" name="LifeCycleEntry" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:ListOfLifeCycleEntry" name="ListOfLifeCycleEntry" nillable="true"/>
+</xs:schema>

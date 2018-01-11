@@ -1,0 +1,33 @@
+<opc:TypeDictionary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://yourorganisation.org/pvs/" DefaultByteOrder="LittleEndian" xmlns:opc="http://opcfoundation.org/BinarySchema/" xmlns:ua="http://opcfoundation.org/UA/" TargetNamespace="http://yourorganisation.org/pvs/">
+    <opc:Import Namespace="http://opcfoundation.org/UA/"/>
+    <opc:EnumeratedType LengthInBits="32" Name="ExpressionLogicEnum">
+        <opc:EnumeratedValue Name="GREATER_THAN" Value="0"/>
+        <opc:EnumeratedValue Name="GREATER_EQUAL" Value="1"/>
+        <opc:EnumeratedValue Name="EQUAL" Value="2"/>
+        <opc:EnumeratedValue Name="NOT_EQUAL" Value="3"/>
+        <opc:EnumeratedValue Name="LESS_EQUAL" Value="4"/>
+        <opc:EnumeratedValue Name="LESS_THAN" Value="5"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType LengthInBits="32" Name="ExpressionSemanticEnum">
+        <opc:EnumeratedValue Name="ASSURANCE" Value="0"/>
+        <opc:EnumeratedValue Name="SETTING" Value="1"/>
+        <opc:EnumeratedValue Name="MEASUREMENT" Value="2"/>
+        <opc:EnumeratedValue Name="REQUIREMENT" Value="3"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType LengthInBits="32" Name="ViewEnum">
+        <opc:EnumeratedValue Name="BUSINESS" Value="0"/>
+        <opc:EnumeratedValue Name="CONSTRUCTION" Value="1"/>
+        <opc:EnumeratedValue Name="POWER" Value="2"/>
+        <opc:EnumeratedValue Name="FUNCTIONAL" Value="3"/>
+        <opc:EnumeratedValue Name="LOCATION" Value="4"/>
+        <opc:EnumeratedValue Name="SECURITY" Value="5"/>
+        <opc:EnumeratedValue Name="NETWORK" Value="6"/>
+        <opc:EnumeratedValue Name="LIFECYCLE" Value="7"/>
+        <opc:EnumeratedValue Name="HUMAN" Value="8"/>
+    </opc:EnumeratedType>
+    <opc:EnumeratedType LengthInBits="32" Name="VisibilityEnum">
+        <opc:EnumeratedValue Name="PRIVAT" Value="0"/>
+        <opc:EnumeratedValue Name="CONTRACT" Value="1"/>
+        <opc:EnumeratedValue Name="PUBLIC" Value="2"/>
+    </opc:EnumeratedType>
+</opc:TypeDictionary>

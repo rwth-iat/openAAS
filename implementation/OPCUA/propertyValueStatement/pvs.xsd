@@ -1,0 +1,69 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://yourorganisation.org/pvs/Types.xsd" xmlns:tns="http://yourorganisation.org/pvs/Types.xsd" xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd"/>
+    <xs:simpleType name="ExpressionLogicEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GREATER_THAN_0"/>
+            <xs:enumeration value="GREATER_EQUAL_1"/>
+            <xs:enumeration value="EQUAL_2"/>
+            <xs:enumeration value="NOT_EQUAL_3"/>
+            <xs:enumeration value="LESS_EQUAL_4"/>
+            <xs:enumeration value="LESS_THAN_5"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element type="tns:ExpressionLogicEnum" name="ExpressionLogicEnum"/>
+    <xs:complexType name="ListOfExpressionLogicEnum">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" type="tns:ExpressionLogicEnum" name="ExpressionLogicEnum" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:ListOfExpressionLogicEnum" name="ListOfExpressionLogicEnum" nillable="true"/>
+    <xs:simpleType name="ExpressionSemanticEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ASSURANCE_0"/>
+            <xs:enumeration value="SETTING_1"/>
+            <xs:enumeration value="MEASUREMENT_2"/>
+            <xs:enumeration value="REQUIREMENT_3"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element type="tns:ExpressionSemanticEnum" name="ExpressionSemanticEnum"/>
+    <xs:complexType name="ListOfExpressionSemanticEnum">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" type="tns:ExpressionSemanticEnum" name="ExpressionSemanticEnum" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:ListOfExpressionSemanticEnum" name="ListOfExpressionSemanticEnum" nillable="true"/>
+    <xs:simpleType name="ViewEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BUSINESS_0"/>
+            <xs:enumeration value="CONSTRUCTION_1"/>
+            <xs:enumeration value="POWER_2"/>
+            <xs:enumeration value="FUNCTIONAL_3"/>
+            <xs:enumeration value="LOCATION_4"/>
+            <xs:enumeration value="SECURITY_5"/>
+            <xs:enumeration value="NETWORK_6"/>
+            <xs:enumeration value="LIFECYCLE_7"/>
+            <xs:enumeration value="HUMAN_8"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element type="tns:ViewEnum" name="ViewEnum"/>
+    <xs:complexType name="ListOfViewEnum">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" type="tns:ViewEnum" name="ViewEnum" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:ListOfViewEnum" name="ListOfViewEnum" nillable="true"/>
+    <xs:simpleType name="VisibilityEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PRIVAT_0"/>
+            <xs:enumeration value="CONTRACT_1"/>
+            <xs:enumeration value="PUBLIC_2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element type="tns:VisibilityEnum" name="VisibilityEnum"/>
+    <xs:complexType name="ListOfVisibilityEnum">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" type="tns:VisibilityEnum" name="VisibilityEnum" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element type="tns:ListOfVisibilityEnum" name="ListOfVisibilityEnum" nillable="true"/>
+</xs:schema>

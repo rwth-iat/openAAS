@@ -1,0 +1,11 @@
+Identification,3002,DataType
+IdEnum,3003,DataType
+Identification_Encoding_DefaultBinary,5001,Object
+Identification_Encoding_DefaultXml,5002,Object
+BinarySchema_TypeDictionary,6001,Variable
+BinarySchema_TypeDictionary_NamespaceUri,6002,Variable
+XmlSchema_TypeDictionary,6003,Variable
+XmlSchema_TypeDictionary_NamespaceUri,6004,Variable
+BinarySchema_TypeDictionary_Identification,6005,Variable
+XmlSchema_TypeDictionary_Identification,6006,Variable
+IdEnum_EnumStrings,6007,Variable
