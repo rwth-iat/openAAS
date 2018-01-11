@@ -30,52 +30,54 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 ```json
 {
 	"Name": "Motor_M23",
-	"AssetID": {
-		"IDType": "URI",
-		"IDSpec": "http://acplt.org/Assets/Motor_M23"
-	},
 	"AASID": {
 		"IDType": "URI",
 		"IDSpec": "http://acplt.org/AAS/Motor_M23"
 	},
+	"AssetID": {
+		"IDType": "URI",
+		"IDSpec": "http://acplt.org/Assets/Motor_M23"
+	},
 	"Header": {
-		"Name": "Header",
 		"PropertyValueStatementContainers": [
 			{
 				"Name": "Config",
 				"statements": [
 					{
 						"Name": "Asset",
+						"CarrierID": "",
+						"ExpressionLogic": "EQUAL",
+						"ExpressionSemantic": "SETTING",
 						"PropertyID": {
 							"IDType": "URI",
 							"IDSpec": "http://openaas.org/properties/assetId"
 						},
-						"ExpressionLogic": "EQUAL",
-						"ExpressionSemantic": "SETTING",
 						"View": "FUNCTION",
 						"Visibilty": "PUBLIC",
 						"Value": "URI:http://acplt.org/Assets/Motor_M23"
 					},
 					{
 						"Name": "isInstance",
+						"CarrierID": "",
+						"ExpressionLogic": "EQUAL",
+						"ExpressionSemantic": "ASSURANCE",
 						"PropertyID": {
 							"IDType": "URI",
 							"IDSpec": "https://openaas.org/properties/isInstance"
 						},
-						"ExpressionLogic": "EQUAL",
-						"ExpressionSemantic": "ASSURANCE",
 						"View": "FUNCTION",
 						"Visibilty": "PUBLIC",
 						"Value": true
 					},
 					{
 						"Name": "TypeAASID",
+						"CarrierID": "",
+						"ExpressionLogic": "EQUAL",
+						"ExpressionSemantic": "MEASUREMENT",
 						"PropertyID": {
 							"IDType": "URI",
 							"IDSpec": "https://openaas.org/properties/TypeID"
 						},
-						"ExpressionLogic": "EQUAL",
-						"ExpressionSemantic": "SETTING",
 						"View": "FUNCTION",
 						"Visibilty": "PUBLIC",
 						"Value": "URI:http://acplt.org/AAS/MotorType"
@@ -89,16 +91,15 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 		]
 	},
 	"Body": {
-		"Name": "Body",
 		"SubModels": [
 			{
 				"Name": "Runtime",
 				"Version": 1,
-				"Revision": 1,				
-        "ModelID": {
-        					"IDType": "URI",
-        					"IDSpec": "http://acplt.org/models/MotorRuntimeModel"
-        },
+				"Revision": 1,
+				"ModelID": {
+					"IDType": "URI",
+					"IDSpec": "http://acplt.org/models/MotorRuntimeModel"
+				},
 				"PropertyValueStatementContainers": [
 					{
 						"Name": "CurrentStates",
@@ -109,13 +110,13 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 									"IDType": 0,
 									"IDSpec": ""
 								},
+								"ExpressionLogic": "EQUAL",
+								"ExpressionSemantic": "MEASUREMENT",
 								"PropertyID": {
 									"IDType": 0,
 									"IDSpec": ""
 								},
-								"ExpressionLogic": "EQUAL",
-								"ExpressionSemantic": "MEASUREMENT",
-								"View": "FUNCTIONAL",
+								"View": "FUNCTION",
 								"Visibilty": "PUBLIC",
 								"Value": 0
 							},
@@ -125,19 +126,50 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 									"IDType": 0,
 									"IDSpec": ""
 								},
+								"ExpressionLogic": "EQUAL",
+								"ExpressionSemantic": "MEASUREMENT",
 								"PropertyID": {
 									"IDType": 0,
 									"IDSpec": ""
 								},
-								"ExpressionLogic": "EQUAL",
-								"ExpressionSemantic": "MEASUREMENT",
-								"View": "FUNCTIONAL",
+								"View": "FUNCTION",
 								"Visibilty": "PUBLIC",
 								"Value": false
 							}
 						]
 					}
+				],
+				"Domains": [
+					{
+						"Name": "Traces",
+						"PropertyValueStatementContainers": [
+							{
+								"Name": "RotationalSpeed",
+								"CarrierID": {
+									"IDType": "URI",
+									"IDSpec": "http://acplt.org/Assets/Motor_M23"
+								},
+								"ExpressionSemantic": "ASSURANCE",
+								"ExpressionLogic": "GREATER_THAN",
+								"PropertyID": {
+									"IDType": "URI",
+									"IDSpec": "http://acplt.org/properties/currentRotationalSpeed"
+								},
+								"View": "BUSINESS",
+								"Visibility": "PRIVATE"
+							}
+						]
+					}
 				]
+			},
+			{
+				"Name": "LifeCycle",
+				"Version": 0,
+				"Revision": 0,
+				"ModelID": {
+					"IDType": "URI",
+					"IDSpec": "http://acplt.org/models/GenericLifeCycleModel"
+				}
 			},
 			{
 				"Name": "Configuration",
@@ -153,8 +185,13 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 						"statements": [
 							{
 								"Name": "MinRotationSpeed",
+								"CarrierID": "",
 								"ExpressionLogic": "GREATER_THAN",
-								"Value": 100
+								"ExpressionSemantic": "",
+								"PropertyID": "",
+								"View": "",
+								"Visibilty": "",
+								"Value": 51195
 							}
 						],
 						"CarrierID": {
@@ -165,8 +202,8 @@ The motor is of the type ID=http://acplt.org/AAS/MotorType
 							"IDType": 0,
 							"IDSpec": ""
 						},
-						"Visibility": "PUBLIC",
-						"View": "FUNCTIONAL",
+						"Visibility": "PRIVATE",
+						"View": "BUSINESS",
 						"ExpressionSemantic": "ASSURANCE"
 					}
 				]
