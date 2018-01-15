@@ -1,5 +1,5 @@
 # openAAS - \*updated\*
-*NEW* : [JSON Serialization](https://github.com/acplt/openAAS/implementation) of openAAS Administration Shell
+*NEW* : [JSON Serialization](https://github.com/acplt/openAAS/tree/master/implementation) of openAAS Administration Shell
 
 Development Repository for open Asset Administration Shell (openAAS) by Chair of Process Control Engineering RWTH Aachen University and ZVEI.
 
