@@ -19,11 +19,11 @@ A Sub Model can consists of Property Value Statement Containers, structuring obj
 A Property Value Statement Container consists of a Set of
 Property Value Statements and further describing Attributes like (CarrierID, ExpressionLogic, ExpressionSemantic, Visibility and View).
 
-** ID**
+**ID**
 
 Every Id is represented as ISO 29002-5 Identifcator or as URI
 
-** Example **
+**Example**
 
 In this example, you can see an openAAS Asset Administration Shell (ID = http://acplt.org/AAS/Motor_M23) serialized in JSON format. It describes an Asset (Motor, ID = http://acplt.org/AAS/Motor_M23) .
 The motor is of the type ID=http://acplt.org/AAS/MotorType
