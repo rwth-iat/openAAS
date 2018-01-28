@@ -1,6 +1,6 @@
 # openAAS - \*updated\*
 
-*NEW* : The Image for the Workshop on 01/29/18 is available [VirtualBox Image](https://rwth-aachen.sciebo.de/s/m9zn1DnkKS3M28n/download)
+*NEW* : The Image for the Workshop on 01/29/18 is available [VirtualBox Image](https://gigamove.rz.rwth-aachen.de/d/id/xmXvStXMAGHjEt/dd/100)
 
 *NEW* : [JSON Serialization](https://github.com/acplt/openAAS/tree/master/implementation) of openAAS Administration Shell
 
