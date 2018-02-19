@@ -11,9 +11,9 @@ This repository shows the current development state of the administration shell 
 For prototype development, we use the model based runtime environment [ACPLT/RTE](https://github.com/acplt/rte) as well as open source [OPC UA stack open62541](https://github.com/open62541/open62541)
 There are several base models that are used to describe the constituent parts of an AAS and the AAS itself.
 
-The implementation of openAAS bases on the specification given by working papers of [ZVEI/ Plattform Industrie 4.0](www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/structure-of-the-administration-shell.pdf?__blob=publicationFile&v=7)
+The implementation of openAAS bases on the specification given by working papers of [ZVEI/ Plattform Industrie 4.0](http://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/structure-of-the-administration-shell.pdf?__blob=publicationFile&v=7)
 
-With these specification a simplified model for the Asset Administration Shell is proposed [(structure)](https://github.com/acplt/openAAS/blob/master/concepts/structure/structure.pdf).
+With these specification a simplified model for the Asset Administration Shell is proposed [(structure)](https://github.com/acplt/openAAS/blob/master/concepts/Structure/structure.pdf).
 
 Within the [implementation](https://github.com/acplt/openAAS/blob/master/implementation/) folder, you can find the needed OPC UA models to describe an openAAS Asset Administration Shell with your OPC UA Server. Within the folder you also find a basic example of an Asset Administration Shell for a motor serialzed in JSON.
 
